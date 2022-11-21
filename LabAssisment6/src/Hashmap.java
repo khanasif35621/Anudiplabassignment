@@ -8,8 +8,8 @@ public class Hashmap {
 	  HashMap<Integer,Integer> Sc =new HashMap<>();
 		for (int i=1;i<=15;i++)
 		{
-			int SQU = i*i;
-			Sc.put(i, SQU);
+			int SQUARE = i*i;
+			Sc.put(i, SQUARE);
 		}
 		
 		System.out.println(Sc); 	
