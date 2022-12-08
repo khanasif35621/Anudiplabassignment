@@ -1,0 +1,256 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 48
+Server version: 8.0.31 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database parent;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use parent;
+Database changed
+mysql> create table student(Parent_id int primary key,Parent_name varchar(40),city varchar(40),Age int,annual_income int,occupation varchar(40),emailid varchar(40));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into student values(101,"ritesh", "Ahmedabad",40,50000, "Bussiness","khanss@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(102,"kumar", "Ahmedabad",45,500000, "Bussiness","khansdfs@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into student values (103, "kumar swami", "Ahmedabad",46,600000,"corporate Bussiness", "khansdfs@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values (104, "kumar swamini","Mumbai",47,600000,"corporate Bussiness", "khansifaa@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(105, "joyti", "Mumbai",47,600000,"corporate Bussiness", "jyotisaigar@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values (106, "ravish", "Mumbai",48,700000,"machine", "ravishr@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(107,"shudha", "Delhi",48,700000,"machine", "shudha@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into student values(108, "devsing","chennai",48,700000,"machine", "devsing@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql>  insert into student values(109, "diveshkumar", "Banglore", 48,800000,"machineary","diveshaq@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(110, "faroug", "Banglore", 48,800000,"machineary","farog@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(111, "shahid", "Banglore", 45,800000,"job","shahid21@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(112, "ASIF, "chennai", 42,800000,"job","asif342@gmail.com");
+    "> "
+    -> insert into student values(112, "ASIF", "chennai", 42,800000,"job","asif342@gmail.com");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'chennai", 42,800000,"job","asif342@gmail.com");
+"
+insert into student values(11' at line 1
+mysql> insert into student values(112, "ASIF", "chennai", 42,800000,"job","asif342@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(113, "sajjid", "mumbai", 43,900000,"job","sajjid32@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(114, "sakir", "mumbai", 45,900000,"job","sahkir2@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql>
+mysql> insert into student values(115, "sharik", "delhi", 45,900000,"bussiness","shakir2@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql>
+mysql> insert into student values(116, "gayatri", "delhi", 47,900000,"bussiness","gayatri32@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(117, "Ravish", "Ahmedabad", 47,900000,"bussiness","gayatri32@gmail.com");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(118, "sabnan", "Ahmedabad", 48,900000,"job","sabnamkhan@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(119, "fatima", "Banglore", 48,900000,"job","fatima@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student values(120, "farhan", "Delhi", 48,760000,"job","farhan@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++-----------+---------------+-----------+------+---------------+---------------------+-----------------------+
+| Parent_id | Parent_name   | city      | Age  | annual_income | occupation          | emailid               |
++-----------+---------------+-----------+------+---------------+---------------------+-----------------------+
+|       101 | ritesh        | Ahmedabad |   40 |         50000 | Bussiness           | khanss@gmail.com      |
+|       102 | kumar         | Ahmedabad |   45 |        500000 | Bussiness           | khansdfs@gmail.com    |
+|       103 | kumar swami   | Ahmedabad |   46 |        600000 | corporate Bussiness | khansdfs@gmail.com    |
+|       104 | kumar swamini | Mumbai    |   47 |        600000 | corporate Bussiness | khansifaa@gmail.com   |
+|       105 | joyti         | Mumbai    |   47 |        600000 | corporate Bussiness | jyotisaigar@gmail.com |
+|       106 | ravish        | Mumbai    |   48 |        700000 | machine             | ravishr@gmail.com     |
+|       107 | shudha        | Delhi     |   48 |        700000 | machine             | shudha@gmail.com      |
+|       108 | devsing       | chennai   |   48 |        700000 | machine             | devsing@gmail.com     |
+|       109 | diveshkumar   | Banglore  |   48 |        800000 | machineary          | diveshaq@gmail.com    |
+|       110 | faroug        | Banglore  |   48 |        800000 | machineary          | farog@gmail.com       |
+|       111 | shahid        | Banglore  |   45 |        800000 | job                 | shahid21@gmail.com    |
+|       112 | ASIF          | chennai   |   42 |        800000 | job                 | asif342@gmail.com     |
+|       113 | sajjid        | mumbai    |   43 |        900000 | job                 | sajjid32@gmail.com    |
+|       114 | sakir         | mumbai    |   45 |        900000 | job                 | sahkir2@gmail.com     |
+|       115 | sharik        | delhi     |   45 |        900000 | bussiness           | shakir2@gmail.com     |
+|       116 | gayatri       | delhi     |   47 |        900000 | bussiness           | gayatri32@gmail.com   |
+|       117 | Ravish        | Ahmedabad |   47 |        900000 | bussiness           | gayatri32@gmail.com   |
+|       118 | sabnan        | Ahmedabad |   48 |        900000 | job                 | sabnamkhan@gmail.com  |
+|       119 | fatima        | Banglore  |   48 |        900000 | job                 | fatima@gmail.com      |
+|       120 | farhan        | Delhi     |   48 |        760000 | job                 | farhan@gmail.com      |
++-----------+---------------+-----------+------+---------------+---------------------+-----------------------+
+20 rows in set (0.00 sec)
+
+mysql> update student set emailid ="NA";
+Query OK, 20 rows affected (0.01 sec)
+Rows matched: 20  Changed: 20  Warnings: 0
+
+mysql> select * from student;
++-----------+---------------+-----------+------+---------------+---------------------+---------+
+| Parent_id | Parent_name   | city      | Age  | annual_income | occupation          | emailid |
++-----------+---------------+-----------+------+---------------+---------------------+---------+
+|       101 | ritesh        | Ahmedabad |   40 |         50000 | Bussiness           | NA      |
+|       102 | kumar         | Ahmedabad |   45 |        500000 | Bussiness           | NA      |
+|       103 | kumar swami   | Ahmedabad |   46 |        600000 | corporate Bussiness | NA      |
+|       104 | kumar swamini | Mumbai    |   47 |        600000 | corporate Bussiness | NA      |
+|       105 | joyti         | Mumbai    |   47 |        600000 | corporate Bussiness | NA      |
+|       106 | ravish        | Mumbai    |   48 |        700000 | machine             | NA      |
+|       107 | shudha        | Delhi     |   48 |        700000 | machine             | NA      |
+|       108 | devsing       | chennai   |   48 |        700000 | machine             | NA      |
+|       109 | diveshkumar   | Banglore  |   48 |        800000 | machineary          | NA      |
+|       110 | faroug        | Banglore  |   48 |        800000 | machineary          | NA      |
+|       111 | shahid        | Banglore  |   45 |        800000 | job                 | NA      |
+|       112 | ASIF          | chennai   |   42 |        800000 | job                 | NA      |
+|       113 | sajjid        | mumbai    |   43 |        900000 | job                 | NA      |
+|       114 | sakir         | mumbai    |   45 |        900000 | job                 | NA      |
+|       115 | sharik        | delhi     |   45 |        900000 | bussiness           | NA      |
+|       116 | gayatri       | delhi     |   47 |        900000 | bussiness           | NA      |
+|       117 | Ravish        | Ahmedabad |   47 |        900000 | bussiness           | NA      |
+|       118 | sabnan        | Ahmedabad |   48 |        900000 | job                 | NA      |
+|       119 | fatima        | Banglore  |   48 |        900000 | job                 | NA      |
+|       120 | farhan        | Delhi     |   48 |        760000 | job                 | NA      |
++-----------+---------------+-----------+------+---------------+---------------------+---------+
+20 rows in set (0.00 sec)
+
+
+mysql> select * from student where annual_income>600000;
++-----------+-------------+-----------+------+---------------+------------+---------+
+| Parent_id | Parent_name | city      | Age  | annual_income | occupation | emailid |
++-----------+-------------+-----------+------+---------------+------------+---------+
+|       106 | ravish      | Mumbai    |   48 |        700000 | machine    | NA      |
+|       107 | shudha      | Delhi     |   48 |        700000 | machine    | NA      |
+|       108 | devsing     | chennai   |   48 |        700000 | machine    | NA      |
+|       109 | diveshkumar | Banglore  |   48 |        800000 | machineary | NA      |
+|       110 | faroug      | Banglore  |   48 |        800000 | machineary | NA      |
+|       111 | shahid      | Banglore  |   45 |        800000 | job        | NA      |
+|       112 | ASIF        | chennai   |   42 |        800000 | job        | NA      |
+|       113 | sajjid      | mumbai    |   43 |        900000 | job        | NA      |
+|       114 | sakir       | mumbai    |   45 |        900000 | job        | NA      |
+|       115 | sharik      | delhi     |   45 |        900000 | bussiness  | NA      |
+|       116 | gayatri     | delhi     |   47 |        900000 | bussiness  | NA      |
+|       117 | Ravish      | Ahmedabad |   47 |        900000 | bussiness  | NA      |
+|       118 | sabnan      | Ahmedabad |   48 |        900000 | job        | NA      |
+|       119 | fatima      | Banglore  |   48 |        900000 | job        | NA      |
+|       120 | farhan      | Delhi     |   48 |        760000 | job        | NA      |
++-----------+-------------+-----------+------+---------------+------------+---------+
+15 rows in set (0.00 sec)
+
+
+
+mysql> select Parent_id,Parent_name,Age,annual_income,occupation,city from student where city="Ahmedabad";
++-----------+-------------+------+---------------+---------------------+-----------+
+| Parent_id | Parent_name | Age  | annual_income | occupation          | city      |
++-----------+-------------+------+---------------+---------------------+-----------+
+|       101 | ritesh      |   40 |         50000 | Bussiness           | Ahmedabad |
+|       102 | kumar       |   45 |        500000 | Bussiness           | Ahmedabad |
+|       103 | kumar swami |   46 |        600000 | corporate Bussiness | Ahmedabad |
+|       117 | Ravish      |   47 |        900000 | bussiness           | Ahmedabad |
+|       118 | sabnan      |   48 |        900000 | job                 | Ahmedabad |
++-----------+-------------+------+---------------+---------------------+-----------+
+5 rows in set (0.00 sec)
+
+mysql> select Parent_id,Parent_name,Age,annual_income,occupation,city from student where city="Delhi";
++-----------+-------------+------+---------------+------------+-------+
+| Parent_id | Parent_name | Age  | annual_income | occupation | city  |
++-----------+-------------+------+---------------+------------+-------+
+|       107 | shudha      |   48 |        700000 | machine    | Delhi |
+|       115 | sharik      |   45 |        900000 | bussiness  | delhi |
+|       116 | gayatri     |   47 |        900000 | bussiness  | delhi |
+|       120 | farhan      |   48 |        760000 | job        | Delhi |
++-----------+-------------+------+---------------+------------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select Parent_id,Parent_name,Age,annual_income,occupation,city from student where city="Mumbai";
++-----------+---------------+------+---------------+---------------------+--------+
+| Parent_id | Parent_name   | Age  | annual_income | occupation          | city   |
++-----------+---------------+------+---------------+---------------------+--------+
+|       104 | kumar swamini |   47 |        600000 | corporate Bussiness | Mumbai |
+|       105 | joyti         |   47 |        600000 | corporate Bussiness | Mumbai |
+|       106 | ravish        |   48 |        700000 | machine             | Mumbai |
+|       113 | sajjid        |   43 |        900000 | job                 | mumbai |
+|       114 | sakir         |   45 |        900000 | job                 | mumbai |
++-----------+---------------+------+---------------+---------------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> select Parent_id,Parent_name,Age,annual_income,occupation,city from student where city="chennai";
++-----------+-------------+------+---------------+------------+---------+
+| Parent_id | Parent_name | Age  | annual_income | occupation | city    |
++-----------+-------------+------+---------------+------------+---------+
+|       108 | devsing     |   48 |        700000 | machine    | chennai |
+|       112 | ASIF        |   42 |        800000 | job        | chennai |
++-----------+-------------+------+---------------+------------+---------+
+2 rows in set (0.00 sec)
+
+mysql> select Parent_id,Parent_name,Age,annual_income,occupation,city from student where city="Banglore";
++-----------+-------------+------+---------------+------------+----------+
+| Parent_id | Parent_name | Age  | annual_income | occupation | city     |
++-----------+-------------+------+---------------+------------+----------+
+|       109 | diveshkumar |   48 |        800000 | machineary | Banglore |
+|       110 | faroug      |   48 |        800000 | machineary | Banglore |
+|       111 | shahid      |   45 |        800000 | job        | Banglore |
+|       119 | fatima      |   48 |        900000 | job        | Banglore |
++-----------+-------------+------+---------------+------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from student where annual_income<500000;
++-----------+-------------+-----------+------+---------------+------------+---------+
+| Parent_id | Parent_name | city      | Age  | annual_income | occupation | emailid |
++-----------+-------------+-----------+------+---------------+------------+---------+
+|       101 | ritesh      | Ahmedabad |   40 |         50000 | Bussiness  | NA      |
++-----------+-------------+-----------+------+---------------+------------+---------+
+1 row in set (0.00 sec)
+
+
+mysql> select * from student where Age>45;
+
++-----------+---------------+-----------+------+---------------+---------------------+---------+
+| Parent_id | Parent_name   | city      | Age  | annual_income | occupation          | emailid |
++-----------+---------------+-----------+------+---------------+---------------------+---------+
+|       103 | kumar swami   | Ahmedabad |   46 |        600000 | corporate Bussiness | NA      |
+|       104 | kumar swamini | Mumbai    |   47 |        600000 | corporate Bussiness | NA      |
+|       105 | joyti         | Mumbai    |   47 |        600000 | corporate Bussiness | NA      |
+|       106 | ravish        | Mumbai    |   48 |        700000 | machine             | NA      |
+|       107 | shudha        | Delhi     |   48 |        700000 | machine             | NA      |
+|       108 | devsing       | chennai   |   48 |        700000 | machine             | NA      |
+|       109 | diveshkumar   | Banglore  |   48 |        800000 | machineary          | NA      |
+|       110 | faroug        | Banglore  |   48 |        800000 | machineary          | NA      |
+|       116 | gayatri       | delhi     |   47 |        900000 | bussiness           | NA      |
+|       117 | Ravish        | Ahmedabad |   47 |        900000 | bussiness           | NA      |
+|       118 | sabnan        | Ahmedabad |   48 |        900000 | job                 | NA      |
+|       119 | fatima        | Banglore  |   48 |        900000 | job                 | NA      |
+|       120 | farhan        | Delhi     |   48 |        760000 | job                 | NA      |
++-----------+---------------+-----------+------+---------------+---------------------+---------+
+13 rows in set (0.00 sec)
